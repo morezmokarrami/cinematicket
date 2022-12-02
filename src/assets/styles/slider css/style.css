@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: IRANSans, system-ui;
+}
+
+
+.slider-pic {
+    min-height: 430px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.slider-pic2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.slider-pic3 {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    background-position: center center;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.slider-content {
+    position: absolute;
+    top: 25px;
+    right: 365px;
+}
+
+.shadow {
+    background-color: rgba(0, 0, 0, 65%);
+    width: 100%;
+    height: 430px;
+    text-align: center;
+}
+
+.small-pic {
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.under-nav {
+    border-top: 1px solid #b4b4b4;
+}
+
+.logo-red {
+    color: #ff3543;
+}
+
+.slider-text {
+    color: aliceblue;
+}
+
+.box_fm {
+    background-color: rgba(255, 255, 255, .08);
+}
+
+.profile-pic {
+    width: 20px;
+    height: 20px;
+}
+
+.slider-description {
+
+}
+
+.buy-box {
+    background-color: aliceblue;
+    width: 130px;
+}
+
+.swiper1 {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide1 {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: calc((100% - 40px) / 2) !important;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.search {
+    position: absolute;
+    left: 18px;
+    top: 70px;
+    z-index: 4;
+    background-color: white;
+    border-radius: 15px;
+    border: #b4b4b4 solid 1px;
+    border-bottom: 0px;
+}
+
+.register {
+}
+
+.backG-register {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 20%;
+    background-image: url("../../images/register/auth_bg.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 750px;
+}
+
+.register-box {
+    width: 550px;
+    border: #b4b4b4 solid 1px;
+}
+
+.center{
+    position: absolute;
+    top: 27%;
+    left: 35%
+}
