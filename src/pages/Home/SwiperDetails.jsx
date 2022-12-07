@@ -1,13 +1,14 @@
-import {Link} from "react-router-dom";
 import React from "react";
+import {Link} from "react-router-dom";
+import {SwiperActors} from "./SwiperActors";
 
 export const SwiperDetails = ({item}) => {
-
-    return(
+    return (
         <>
             <div className={'shadow position-relative rounded-4'}>
                 <div className={'slider-pic3 rounded-4'}>
-                    <img src={item.right_image?.desktop_url} className={'rounded-3'} style={{width: '300px', height:'360px'}} alt=""/>
+                    <img src={item.right_image?.desktop_url} className={'rounded-3'}
+                         style={{width: '300px', height: '360px'}} alt=""/>
                 </div>
                 <div className={'slider-pic2'}><img src={item.left_image?.desktop_url} alt=""/>
                 </div>
@@ -28,16 +29,7 @@ export const SwiperDetails = ({item}) => {
                         <span className={'slider-text'}>{item.movie?.description}</span>
                     </div>
                     <div className={'mt-4 d-flex justify-content-end'}>
-                        <div className={'px-3 py-1 box_fm slider-text rounded-4'}>
-                            <span className={'ms-1'}>{item.movie?.actors[1]?.full_name}</span>
-                            <img className={'profile-pic'}
-                                 src={item.movie?.actors[1]?.profile_photo?.desktop_url} alt=""/>
-                        </div>
-                        <div className={'px-3 py-1 box_fm slider-text rounded-4'}>
-                            <span className={'ms-1'}>{item.movie?.actors[0]?.full_name}</span>
-                            <img className={'profile-pic'}
-                                 src={item.movie?.actors[0]?.profile_photo?.desktop_url} alt=""/>
-                        </div>
+                        <SwiperActors actors={item.movie}/>
                     </div>
                     <div className={'mt-4 d-flex justify-content-end'}>
                         <Link to={`/cinematicket/${item.movie?.id}`}>
