@@ -12,4 +12,4 @@ This project is my first project with Reactjs and I used these technologies:
 
 5-Swiper for sliders
 
-In this project you can see details of each movies and theaters and you can search 20 movies because I could not find the api which has everything inside. You can either sign up or log in in your account. I used hooks instead of class and used redux many times in my project. It has simple things like map, useEffect and other basic of Reactjs.
+In this project you can see details of each movies and theaters and you can search 20 movies because I could not find the api which has everything inside. You can either sign up or login in your account. I used hooks instead of class and used redux many times in my project. It has simple things like map, useEffect and other basic things of Reactjs.
