@@ -71,8 +71,8 @@ const EachPage = () => {
             </Container>
             <Container className={'mt-5'}>
                 <Row>
-                    <Col lg={4}>
-                        <BestSelling value={value}/>
+                    <Col lg={4} className={'d-none d-xl-block'}>
+                        <BestSelling/>
                     </Col>
                     <Col lg={8}>
                         <Accordion value={value}/>

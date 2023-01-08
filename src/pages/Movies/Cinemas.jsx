@@ -7,6 +7,7 @@ const {Panel} = Collapse;
 
 export const Cinemas = ({value}) => {
 
+    console.log(value);
     return (
         <>
             {

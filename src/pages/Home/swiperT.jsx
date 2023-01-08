@@ -43,7 +43,7 @@ export default function SwiperT() {
             >
 
                 {
-                    theater.map((item, index) => {
+                    theater?.map((item, index) => {
                         return (
                                 <SwiperSlide key={item.id}>
                                     <Link to={`/cinematicket/${item.id}`}>

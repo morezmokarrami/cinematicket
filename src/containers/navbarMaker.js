@@ -4,6 +4,7 @@ import {useSelector} from "react-redux";
 import {SearchResult} from "../pages/Home/searchResult";
 import {Button} from "reactstrap";
 import {SearchOutlined, UserOutlined} from "@ant-design/icons";
+import Cities from "../pages/Navbar/CitiesModal";
 
 
 
@@ -66,7 +67,10 @@ export const NavbarMaker = () => {
                         <div className="d-flex">
                             <input className="form-control me-2" type="text" placeholder="جستجو..."
                                    aria-label="Search" onChange={onChange} value={value2.toString()}></input>
-                            <SearchOutlined style={{position: 'absolute', top:'27px', left: '27px',fontSize: '16px'}}/>
+                            <SearchOutlined style={{position: 'absolute', top:'27px', left: '97px',fontSize: '16px'}}/>
+                        </div>
+                        <div>
+                            <Cities/>
                         </div>
                     </div>
                 </div>

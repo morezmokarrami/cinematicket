@@ -10,7 +10,7 @@ export const BestSelling = () => {
     return (
         <>
             {
-                bestSeller.map((item, index) => {
+                bestSeller?.map((item, index) => {
                     if (index < 20){
                         return (
                             <div key={index.toString()} className={'rounded-3'}>
@@ -21,10 +21,13 @@ export const BestSelling = () => {
                                             <div className={'d-flex mt-4'}>
                                                 <div className={'ms-1'}><span>{item.name}</span></div>
                                                 <div className={''}>
-                                                    <span>{persianJs(index + 1).englishNumber().toString()}</span></div>
+                                                    <span>{persianJs(index + 1).englishNumber().toString()}</span>
+                                                </div>
                                             </div>
-                                            <div><img className={'rounded-3'} src={item.poster?.desktop_url}
-                                                                     style={{width: '64px', height: '80px'}} alt=""/></div>
+                                            <div>
+                                                <img className={'rounded-3'} src={item.poster?.desktop_url}
+                                                                     style={{width: '64px', height: '80px'}} alt=""/>
+                                            </div>
                                         </li>
                                     </Link>
                                 </ul>

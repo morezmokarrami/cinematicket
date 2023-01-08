@@ -42,12 +42,12 @@ export default function Movies() {
             >
 
                 {
-                    movies.map((item, index) => {
+                    movies?.map((item, index) => {
                         return (
-                                <SwiperSlide key={item.id}>
+                                <SwiperSlide key={item.id} className={'swiper-slide'}>
                                     <Link to={`/cinematicket/${item.id}`}>
                                         <div className={'text-center rounded-2'}>
-                                            <img src={item.poster.desktop_url} className={'rounded-2'} alt={item.id}/>
+                                            <img src={item.poster?.desktop_url} className={'rounded-2'} alt={item.id}/>
                                         </div>
                                         <div className={'text-center'}>
                                             <p>{item.name}</p>

@@ -1,6 +1,7 @@
 import {Button, Container, Col, Row} from "reactstrap";
 import 'antd/dist/antd.css';
-import Swiper from "./swiper";
+import SwiperLg from "./SwiperLg";
+import SwiperMd from './SwiperMd'
 import {NavbarMaker} from "../../containers/navbarMaker";
 import {NavbarMaker2} from "../../containers/navbarMaker2";
 import Movies from "./movies";
@@ -126,19 +127,26 @@ export const Home = () => {
                         </Col>
                     </Row>
                 </div>
-                <div className={'container-fluid py-3'}>
+                <div className={'container-fluid py-3 d-none d-xl-block'}>
                     <Row>
                         <Col lg={12}>
-                            <Swiper/>
+                            <SwiperLg/>
+                        </Col>
+                    </Row>
+                </div>
+                <div className={'container-fluid py-3 d-block d-xl-none'}>
+                    <Row>
+                        <Col lg={12}>
+                            <SwiperMd/>
                         </Col>
                     </Row>
                 </div>
                 <div className={'container-fluid py-3'}>
                     <Row>
-                        <Col lg={3}>
+                        <Col className={'d-none d-xl-block'} lg={3}>
                             <BestSelling/>
                         </Col>
-                        <Col lg={9}>
+                        <Col sm={12} lg={9}>
                             <Movies/>
                             <Theaters/>
                             <ComedyTheater/>

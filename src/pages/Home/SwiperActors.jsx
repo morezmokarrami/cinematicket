@@ -4,7 +4,7 @@ export const SwiperActors = ({actors}) => {
     return(
         <>
             {
-                actors.actors.map((item, index) => {
+                actors?.actors?.map((item, index) => {
                     if (index < 3) {
                         return (
                             <div key={index} className={'px-3 py-1 box_fm slider-text rounded-4'}>

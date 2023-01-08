@@ -32,7 +32,8 @@ export const Header = ({value}) => {
                                                 <ActorsHeader value={value}/>
                                             </div>
                                             <div style={{marginTop:'75px', color: "white"}} >
-                                                <Button style={{backgroundColor: '#ff3543'}}><a href={value.movie?.aparat_trailer} target={'_blank'} style={{color: 'white'}}> تیزر فیلم{<CaretRightOutlined style={{fontSize: '20px'}}/>}</a></Button>
+                                                {value.movie?.aparat_trailer ? <Button style={{backgroundColor: '#ff3543'}}><a href={value.movie?.aparat_trailer} target={'_blank'} style={{color: 'white'}}> تیزر فیلم{<CaretRightOutlined style={{fontSize: '20px'}}/>}</a></Button> :
+                                                    <span></span>}
                                             </div>
                                         </div>
                                         <div className={'position-absolute'} style={{top: '30px', right:'-50px'}}>
