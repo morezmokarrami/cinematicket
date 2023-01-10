@@ -38,7 +38,7 @@ export default function Pictures({pics}) {
                         })
                     ) : (
                         <p>
-                            salam
+                            no image
                         </p>
 
                     )
