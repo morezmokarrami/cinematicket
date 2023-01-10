@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react'
 import "antd/dist/antd.css";
 import {Collapse} from 'antd';
-import moment from "jalali-moment";
 import {PanelItem} from "./PanelItem";
 import {NotFound} from "./NotFound";
 import {Cinemas} from "./Cinemas";

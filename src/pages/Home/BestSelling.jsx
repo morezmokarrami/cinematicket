@@ -9,6 +9,7 @@ export const BestSelling = () => {
 
     return (
         <>
+            <h6 dir={'rtl'} className={'mb-3'} style={{color: '#818181'}}>پرفروش ترین امسال</h6>
             {
                 bestSeller?.map((item, index) => {
                     if (index < 20){

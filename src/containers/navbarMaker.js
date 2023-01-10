@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 import {SearchResult} from "../pages/Home/searchResult";
 import {Button} from "reactstrap";
 import {SearchOutlined, UserOutlined} from "@ant-design/icons";
-import Cities from "../pages/Navbar/CitiesModal";
+
 
 
 
@@ -37,8 +37,8 @@ export const NavbarMaker = () => {
 
     return (
         <>
-            <nav className={"navbar navbar-expand-lg py-3"} dir={'rtl'}>
-                <div className="container-fluid">
+            <nav className={"navbar navbar-expand-lg bg-white w-100"} dir={'rtl'}>
+                <div className="container-fluid w-100">
                     <Link to={'/cinematicket'}>
                         <img src={require('../assets/images/slider pic/logo.svg').default} alt=""/>
                         <svg height="27.283" viewBox="0 0 108.931 27.283" width="108.931"
@@ -67,10 +67,7 @@ export const NavbarMaker = () => {
                         <div className="d-flex">
                             <input className="form-control me-2" type="text" placeholder="جستجو..."
                                    aria-label="Search" onChange={onChange} value={value2.toString()}></input>
-                            <SearchOutlined style={{position: 'absolute', top:'27px', left: '97px',fontSize: '16px'}}/>
-                        </div>
-                        <div>
-                            <Cities/>
+                            <SearchOutlined style={{position: 'absolute', top:'35%', left: '2%',fontSize: '16px'}}/>
                         </div>
                     </div>
                 </div>
@@ -78,9 +75,6 @@ export const NavbarMaker = () => {
                     <SearchResult value={value} value2={value2}/>
                 </div>
             </nav>
-            <div>
-
-            </div>
         </>
     )
 }

@@ -1,38 +1,35 @@
 import React, {useState} from "react";
-import {Sans} from "./Sans";
 import {Accordion, Button, Collapse} from "reactstrap";
+import {StarOutlined} from "@ant-design/icons";
 
 
 export const PanelItem = ({item}) => {
 
-
-    const [toggle, setToggle] = useState(false);
-
-    const onClick = () => {
-        setToggle(!toggle);
-        console.log(toggle);
-    };
-
     return (
         <>
             {item.cinemas?.map((item, index) => {
-
-
                 return (
-                    <div className={'d-flex justify-content-around'} key={index.toString()}>
+                    <div className={'w-100'} key={index.toString()}>
                         <div className={'mt-5'}>
-                            <Button onClick={onClick} className={'bg-body'}
-                                    style={{marginBottom: '1rem', color: '#ff3543', border: 0}}>
-                                سانس ها
-                            </Button>
-                        </div>
-                        <div className={'mt-5'}>
-                            <p>{item.cinema?.name_fa}</p>
-                            <div><img src={item.cinema?.thumbnail?.desktop_url} alt=""/>
+                            <div className={'d-flex justify-content-end'}>
+                                <div dir={'rtl'} className={'text-start ms-4'}>
+                                    <h6>{item.cinema?.name_fa}</h6>
+                                    <p className={'text-start'}>{item.cinema?.address}</p>
+                                    <div className={'rate rounded-3'} style={Math.ceil(((item.cinema?.rate) * 10) / 10) >= 4 ? {backgroundColor: "green"} : {backgroundColor: "gray"}}>
+                                        <div className={'text-center mt-1'}>
+                                            <div className={'d-flex justify-content-around'}>
+                                                <div><StarOutlined size={20}/></div>
+                                                <div>امتیاز
+                                                    {Math.ceil(((item.cinema?.rate) * 10) / 10)}/5
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={'ms-3 me-4'}>
+                                    <img className={'rounded-3'} style={{width: '170px', height: '130px'}} src={item.cinema?.thumbnail?.desktop_url} alt=""/>
+                                </div>
                             </div>
-                            <p>{item.cinema?.address}</p>
-                            <p>امتیاز{Math.ceil(((item.cinema?.rate) * 10) / 10)}/5</p>
-                            <Sans cinemas={item} id={item.cinema?.id} toggle={toggle}/>
                         </div>
                     </div>
                 )

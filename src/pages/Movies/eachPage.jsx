@@ -10,6 +10,7 @@ import {Header} from "./Header";
 import {BestSelling} from "../Home/BestSelling";
 import '../../assets/styles/slider css/style.css'
 import {Loading} from "../../containers/Loading";
+import Pictures from "./Pictures";
 
 const EachPage = () => {
 
@@ -75,7 +76,13 @@ const EachPage = () => {
                         <BestSelling/>
                     </Col>
                     <Col lg={8}>
-                        <Accordion value={value}/>
+                        <div>
+                            <Accordion value={value}/>
+                        </div>
+                        <div>
+                            <h5 style={{color: '#818181'}} dir={'rtl'} className={'mt-5'}>تصاویر فیلم {value.movie?.name}</h5>
+                            <Pictures pics={value}/>
+                        </div>
                     </Col>
                 </Row>
             </Container>

@@ -52,6 +52,9 @@
 
 .under-nav {
     border-top: 1px solid #b4b4b4;
+    z-index: 7;
+    width: 100%;
+    background-color: white;
 }
 
 .logo-red {
@@ -116,7 +119,7 @@
     background-color: white;
     border-radius: 15px;
     border: #b4b4b4 solid 1px;
-    border-bottom: 0px;
+    border-bottom: 0;
 }
 
 .register {
@@ -143,4 +146,10 @@
     position: absolute;
     top: 27%;
     left: 35%
+}
+
+.rate {
+    padding: 5px 5px;
+    width: 100px;
+    color: #eee;
 }
